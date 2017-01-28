@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hide Facebook Likes",
+  "description": "Remove the like notifications, like button and number of likes from posts",
+  "version": "0.21",
+
+  "browser_action": {
+    "default_icon": "icon.jpg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["jquery-3.1.1.slim.min.js","HidezLikez.js"]
+    }
+  ],
+
+  "permissions": [
+    "tabs"
+  ]
+}
